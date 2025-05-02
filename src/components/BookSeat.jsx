@@ -13,19 +13,22 @@ const BookSeat = () => {
   //Handle user select button
   const handleSubmit = async (userId, userName) => {
     try {
-      const response = await fetch("http://localhost:3000/book", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          roomId: state.roomId,
-          roomName: state.roomName,
-          seatId: state.seatId,
-          userId: userId,
-          userName: userName,
-        }),
-      });
+      const response = await fetch(
+        "https://bookmyseat-server.vercel.app/book",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            roomId: state.roomId,
+            roomName: state.roomName,
+            seatId: state.seatId,
+            userId: userId,
+            userName: userName,
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

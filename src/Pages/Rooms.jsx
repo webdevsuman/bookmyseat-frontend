@@ -14,7 +14,7 @@ const Rooms = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/login");
+        const res = await fetch("https://bookmyseat-server.vercel.app/login");
         const resData = await res.json();
         // console.log(resData.data);
 
@@ -53,7 +53,7 @@ const Rooms = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/login");
+        const res = await fetch("https://bookmyseat-server.vercel.app/login");
         const resData = await res.json();
         // console.log(resData.data);
 

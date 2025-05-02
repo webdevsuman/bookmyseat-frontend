@@ -7,7 +7,7 @@ const Admin = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/login");
+        const res = await fetch("https://bookmyseat-server.vercel.app/login");
         const resData = await res.json();
         setRooms(resData.seeRooms);
       } catch (err) {
@@ -22,7 +22,10 @@ const Admin = () => {
         {/* Add User */}
         <div className="text-center text-gray-800 border-1 p-5 rounded-2xl">
           <h1 className="text-3xl mb-4">Add User</h1>
-          <form action="http://localhost:3000/adduser" method="post">
+          <form
+            action="https://bookmyseat-server.vercel.app/adduser"
+            method="post"
+          >
             <label className="m-2" htmlFor="username">
               Username
             </label>
@@ -79,7 +82,10 @@ const Admin = () => {
         {/* Add Room */}
         <div className="text-center text-gray-800 border-1 p-5 rounded-2xl">
           <h1 className="text-3xl mb-4">Add Room</h1>
-          <form action="http://localhost:3000/addroom" method="post">
+          <form
+            action="https://bookmyseat-server.vercel.app/addroom"
+            method="post"
+          >
             <label className="m-2" htmlFor="roomName">
               Name
             </label>
@@ -111,7 +117,9 @@ const Admin = () => {
       </div>
       {/* User List */}
       <div className="mt-10">
-      <h1 className="text-4xl text-center mb-5 text-gray-800">Booked Slots</h1>
+        <h1 className="text-4xl text-center mb-5 text-gray-800">
+          Booked Slots
+        </h1>
         <UserList />
       </div>
     </div>

@@ -6,7 +6,7 @@ const UserList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/login");
+        const res = await fetch("https://bookmyseat-server.vercel.app/login");
         const resData = await res.json();
         // console.log(resData.data);
 
@@ -20,12 +20,15 @@ const UserList = () => {
   // console.log(members);
   const handleClick = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/delete/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://bookmyseat-server.vercel.app/delete/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -86,7 +89,9 @@ const UserList = () => {
                     onClick={async () => {
                       handleClick(user.id);
                       alert("Slot cleared");
-                      const res = await fetch("http://localhost:3000/login");
+                      const res = await fetch(
+                        "https://bookmyseat-server.vercel.app/login"
+                      );
                       const resData = await res.json();
                       // console.log(resData.data);
 

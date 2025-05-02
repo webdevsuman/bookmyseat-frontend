@@ -10,7 +10,7 @@ const Users = () => {
 
   useEffect(()=>{
     const fetchData = async ()=>{
-      const res = await fetch("http://localhost:3000/login");
+      const res = await fetch("https://bookmyseat-server.vercel.app/login");
       const data = await res.json();
       const loginUserData = data.seeBookings.filter(row => row.user_id == id)
 
