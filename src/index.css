@@ -8,4 +8,7 @@ body {
   body {
     background-position: center;
   }
+  #hero {
+    padding-bottom: 200px;
+  }
 }
