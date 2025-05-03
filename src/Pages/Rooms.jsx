@@ -68,9 +68,17 @@ const Rooms = () => {
 
   return (
     <div>
-      <div className="heading text-center my-10">
+      <div className="heading text-center my-10 flex flex-col items-center">
         <h1 className="text-3xl text-gray-900">Room name : {roomName}</h1>
         <h2 className="text-xl text-gray-500">Seats: {seats}</h2>
+        <div className="flex gap-10 my-2">
+          <p className="flex items-center gap-2">
+            <div className="h-5 w-5 bg-red-500"></div> BOOKED
+          </p>
+          <p className="flex items-center gap-2">
+            <div className="h-5 w-5 bg-blue-500"></div> Available
+          </p>
+        </div>
       </div>
       <div className="flex flex-wrap gap-2 text-white text-center md:px-130 justify-center">
         {rows.map((seat) => (
