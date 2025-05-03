@@ -71,12 +71,12 @@ const Rooms = () => {
       <div className="heading text-center my-10 flex flex-col items-center">
         <h1 className="text-3xl text-gray-900">Room name : {roomName}</h1>
         <h2 className="text-xl text-gray-500">Seats: {seats}</h2>
-        <div className="flex gap-10 my-2">
+        <div className="flex gap-10 my-2 text-gray-900">
           <p className="flex items-center gap-2">
-            <div className="h-5 w-5 bg-red-500"></div> BOOKED
+            <span className="h-5 w-5 bg-red-500"></span> BOOKED
           </p>
           <p className="flex items-center gap-2">
-            <div className="h-5 w-5 bg-blue-500"></div> Available
+            <span className="h-5 w-5 bg-blue-500"></span> Available
           </p>
         </div>
       </div>
@@ -95,7 +95,7 @@ const Rooms = () => {
             <div
               title={seat.name || "Available"}
               className={`${
-                seat.booked ? "bg-red-500" : "bg-blue-700"
+                seat.booked ? "bg-red-500" : "bg-blue-500"
               } flex h-10 w-10 justify-center align-middle`}
             >
               {seat.id}

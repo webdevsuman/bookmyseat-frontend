@@ -1,6 +1,11 @@
 body {
   background-image: url("/leone-venter-VieM9BdZKFo-unsplash.jpg");
   background-size: cover;
-  /* background-color: rgba(255, 255, 255, 0.767);
-  background-blend-mode: overlay; */
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 472px) {
+  body {
+    background-position: center;
+  }
 }
