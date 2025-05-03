@@ -9,6 +9,9 @@ body {
     background-position: center;
   }
   #hero {
-    padding-bottom: 200px;
+    padding-bottom: 340px;
+  }
+  #login{
+    height: 90vh;
   }
 }

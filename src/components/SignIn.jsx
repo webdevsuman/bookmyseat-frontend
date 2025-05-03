@@ -2,7 +2,10 @@ import React from "react";
 
 const SignIn = () => {
   return (
-    <div className="text-center text-gray-800 mt-5 h-110 flex justify-center items-center">
+    <div
+      id="login"
+      className="text-center text-gray-800 h-110 flex justify-center items-center"
+    >
       <div className="bg-gray-100 md:py-10 md:px-15 p-5 rounded-2xl border-1">
         <h1 className="text-3xl mb-4">Login below</h1>
         <form action="https://bookmyseat-server.vercel.app/login" method="post">
