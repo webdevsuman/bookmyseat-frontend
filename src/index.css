@@ -8,7 +8,7 @@ body {
   body {
     background-position: center;
   }
-  #hero {
+  #hero,#rooms {
     padding-bottom: 340px;
   }
   #login{

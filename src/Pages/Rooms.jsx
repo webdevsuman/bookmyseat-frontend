@@ -67,7 +67,7 @@ const Rooms = () => {
   // console.log(members);
 
   return (
-    <div>
+    <div id="rooms">
       <div className="heading text-center my-10 flex flex-col items-center">
         <h1 className="text-3xl text-gray-900">Room name : {roomName}</h1>
         <h2 className="text-xl text-gray-500">Seats: {seats}</h2>
